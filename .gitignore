@@ -5,3 +5,4 @@ node_modules
 /.svelte-kit
 /.vercel_build_output
 /package
+.env

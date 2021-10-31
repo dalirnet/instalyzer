@@ -1,11 +1,16 @@
 module.exports = {
 	root: true,
-	extends: ['eslint:recommended', 'prettier'],
-	plugins: ['svelte3'],
-	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
+	extends: ["eslint:recommended", "prettier"],
+	plugins: ["svelte3"],
+	overrides: [{ files: ["*.svelte"], processor: "svelte3/svelte3" }],
+	parser: "babel-eslint",
 	parserOptions: {
-		sourceType: 'module',
-		ecmaVersion: 2019
+		extends: "standard",
+		sourceType: "module",
+		ecmaVersion: 2019,
+		ecmaFeatures: {
+			experimentalObjectRestSpread: true
+		}
 	},
 	env: {
 		browser: true,
